@@ -1,0 +1,33 @@
+@use 'sass:math';
+@use './_include-media.scss' as *;
+
+@function vw($width) {
+  @return 100 * math.div($width, 1380) * 1vw;
+}
+
+@function vwM($width) {
+  @return 100 * math.div($width, 420) * 1vw;
+}
+
+.fontSize--small {
+  font-size: vw(14);
+}
+
+.fontSize--medium {
+  font-size: clamp(20px, vw(24), 37px);
+  line-height: 1.2;
+}
+
+.fontSize--large {
+  font-size: clamp(28px, vw(24), 37px);
+  line-height: 1.2;
+}
+
+.fontSize--xl {
+  font-size: clamp(30px, vw(42), 58px);
+  line-height: 1.1;
+}
+
+.fontSize--xxl {
+  font-size: clamp(34px, vw(50), 78px);
+}

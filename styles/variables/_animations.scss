@@ -1,0 +1,35 @@
+@use './_easing.scss' as *;
+
+.scrollSpeed-out {
+  opacity: 1 !important;
+  transition:
+    opacity 1s $expOut 0ms,
+    transform 1s $expOut 0ms;
+}
+
+.scrollSpeed-in {
+  opacity: 0;
+  transform: translate3d(0, -50px, 0);
+  transition:
+    opacity 300ms $expOut 0ms,
+    transform 300ms $expOut 0ms;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.fade-init {
+  opacity: 0;
+  transition: opacity 1ms;
+}
+
+.no-transition {
+  transition: unset;
+}

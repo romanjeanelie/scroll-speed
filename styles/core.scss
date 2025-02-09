@@ -1,0 +1,23 @@
+@use './variables/index.scss' as *;
+
+html {
+  background-color: $backgroundColor;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+#canvas {
+  @include full();
+  position: fixed;
+  pointer-events: none;
+}
+
+.image__center {
+  grid-column: 3 / span 8;
+
+  @include media('<=tablet') {
+    grid-column: 1/-1;
+  }
+}

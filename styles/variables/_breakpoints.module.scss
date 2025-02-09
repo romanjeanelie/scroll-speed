@@ -1,0 +1,21 @@
+$minimum: 320px;
+$phone: 375px;
+$tablet: 767px;
+$desktop: 1024px;
+$large: 1400px;
+$maximum: 1920px;
+
+$breakpoints: (
+  minimum: $minimum,
+  phone: $phone,
+  tablet: $tablet,
+  desktop: $desktop,
+  large: $large,
+  maximum: $maximum,
+);
+
+:export {
+  desktop: $desktop;
+  large: $large;
+  tablet: $tablet;
+}
