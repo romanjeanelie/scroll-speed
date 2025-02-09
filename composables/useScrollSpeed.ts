@@ -5,7 +5,7 @@ import useIsTouch from '@/composables/useIsTouch';
 import lerp from '@/utils/lerp';
 
 class ScrollSpeedManager {
-  private readonly scrollSpeed = 0.004;
+  private readonly scrollSpeed = 0.003;
   private readonly animationOutDelay = 500;
   private static instance: ScrollSpeedManager | null = null;
   private speedEnabledCallbacks = new Set<() => void>();
